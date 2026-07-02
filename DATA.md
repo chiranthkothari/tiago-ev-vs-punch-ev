@@ -20,3 +20,17 @@ Source: deep-research workflow (Tata.ev official + CarDekho/CarWale/Autocar/ZigW
 - Dims: 3880 x 1742 x 1622 mm, WB 2445, boot 366 L, GC 195 mm
 - Colours (7): Pristine White, Pure Grey, Empowered Oxide, Supernova Copper, Fearless Yellow, Bengal Rouge, Caramel
 - Features: 10.25" touchscreen + 10.25" digital cluster, 16" dual-tone alloys, single-pane sunroof, ventilated front seats, 6 airbags, ESC, 360 cam, paddle shifters, e-parking brake, all 4 disc brakes, hill descent, LED fog+cornering, roof rails, leather steering, Alexa, air purifier, auto-dim IRVM.
+
+## HYUNDAI GRAND i10 NIOS (2026, petrol hatchback) — added
+- Body: petrol hatchback (5-seat). Powertrains: 1.2L Kappa petrol NA + bi-fuel CNG option.
+- Price: from ~Rs 5.60 L to ~Rs 8.04 L ex-showroom (Era→Asta; MT/AMT/CNG)
+- Engine: 1.2L (1197cc) Kappa petrol. Power 83 PS (82 bhp)/113.8 Nm. (CNG ~69 PS/95 Nm)
+- Transmission: 5-speed MT / 5-speed AMT (auto, petrol only)
+- Mileage: ~20.7 kmpl ARAI (petrol MT); AMT ~16 kmpl; CNG ~27 km/kg
+- Fuel tank: 37 L. Petrol range/tank ≈ 37 × 20.7 ≈ ~765 km (indicative)
+- Dims: 3815 x 1680 x 1520 mm, WB 2450, boot 260 L, GC 165 mm
+- Colours (7 mono): Fiery Red, Atlas White, Typhoon Silver, Titan Grey, Amazon Grey, Teal Blue, Spark Green + dual-tone (Atlas White / Spark Green + Abyss Black roof)
+- Features: 8" touchscreen (WIRED CarPlay/AA), semi-digital cluster (analog + 3.5" MID), NO sunroof, rear AC vents (Magna+), 15" diamond-cut alloys (top), auto climate (Asta), cruise (Sportz+), wireless charger + push start (Asta). No full Bluelink telematics.
+- Safety: 6 airbags standard, ABS+EBD, ESC, hill-start assist, ISOFIX, rear cam + sensors. 2-star Global NCAP (2020). No Bharat NCAP.
+- 2026: no facelift; continues 2023 update; "Vibe Edition" special (~Rs 7.09 L).
+- Accent colour on site: amber #D97A2B

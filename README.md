@@ -1,7 +1,7 @@
-# Tata Tiago.ev vs Punch.ev — Comparison
+# Tiago.ev vs Punch.ev vs Grand i10 Nios — EV & Petrol Comparison
 
-A mobile-first, light-theme comparison microsite for the **Tata Tiago.ev** (electric hatchback) and **Tata Punch.ev** (electric SUV), built to help decide between the two.
+A mobile-first, light-theme comparison microsite pitting the **Tata Tiago.ev** and **Tata Punch.ev** (electric) against the **Hyundai Grand i10 Nios** (petrol) — an EV-vs-petrol cross-shop built to help decide as a family.
 
-Single self-contained `index.html` — specs, range, pricing, variants, colours, official photography from every angle, and an interactive "which suits us?" decision helper.
+Single self-contained `index.html` — powertrain, range/mileage, pricing, variants, colours, official photography from every angle, and an interactive "which suits us?" decision helper.
 
-Figures are for the 2026 India market (ex-showroom), verified against Tata's official EV pages plus CarDekho, CarWale, Autocar India and ZigWheels. See `DATA.md` for the compiled source data. Prices and specs are indicative — confirm with an authorised Tata dealer before purchase.
+Figures are for the 2026 India market (ex-showroom), verified against Tata.ev and Hyundai India official pages plus CarDekho, CarWale, Autocar India, ZigWheels and 91Wheels. See `DATA.md` for the compiled source data. Prices and specs are indicative — confirm with an authorised dealer before purchase.

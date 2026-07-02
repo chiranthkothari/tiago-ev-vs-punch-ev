@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Tiago.ev vs Punch.ev — Tata EV Comparison</title>
-<meta name="description" content="A side-by-side comparison of the Tata Tiago.ev and Tata Punch.ev — specs, range, pricing, variants, colours and features. Built to decide, together." />
+<title>Tiago.ev vs Punch.ev vs Grand i10 Nios — EV & Petrol Comparison</title>
+<meta name="description" content="A side-by-side comparison of the Tata Tiago.ev, Tata Punch.ev and Hyundai Grand i10 Nios — specs, range, mileage, pricing, colours and features. EV vs petrol, built to decide together." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
@@ -18,11 +18,9 @@
     --faint:#9AA0A8;
     --line:rgba(23,24,28,.09);
     --line-2:rgba(23,24,28,.06);
-    --tiago:#159A5E;      /* Tiago fresh green */
-    --tiago-wash:#EAF6EF;
-    --punch:#4B58D6;      /* Punch indigo */
-    --punch-wash:#ECEDFB;
-    --gold:#B4832E;
+    --tiago:#159A5E;      --tiago-wash:#EAF6EF; --tiago-deep:#0d6b41;
+    --punch:#4B58D6;      --punch-wash:#ECEDFB; --punch-deep:#3540a8;
+    --i10:#D97A2B;        --i10-wash:#FBEFE1;   --i10-deep:#9c5316;
     --shadow-sm:0 1px 2px rgba(23,24,28,.04), 0 4px 14px rgba(23,24,28,.05);
     --shadow-md:0 6px 22px rgba(23,24,28,.07), 0 18px 50px rgba(23,24,28,.06);
     --shadow-lg:0 20px 60px rgba(23,24,28,.10), 0 8px 24px rgba(23,24,28,.06);
@@ -32,307 +30,252 @@
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-  body{
-    font-family:var(--sans);
-    background:var(--bone);
-    color:var(--ink);
-    line-height:1.5;
-    -webkit-font-smoothing:antialiased;
-    overflow-x:hidden;
-  }
+  body{font-family:var(--sans);background:var(--bone);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
   main{overflow-x:hidden;width:100%;max-width:100%}
   img{max-width:100%;display:block;height:auto}
   a{color:inherit;text-decoration:none}
-  .wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 20px}
+  .wrap{width:100%;max-width:1240px;margin:0 auto;padding:0 20px}
   section{position:relative}
-  .eyebrow{
-    font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
-    color:var(--faint);display:inline-flex;align-items:center;gap:8px;
-  }
+  .eyebrow{font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);display:inline-flex;align-items:center;gap:8px}
   .eyebrow::before{content:"";width:22px;height:1px;background:var(--faint);display:inline-block}
-  h2.title{
-    font-size:clamp(1.9rem,5.5vw,3.1rem);font-weight:600;letter-spacing:-.025em;
-    line-height:1.04;margin:16px 0 0;max-width:16ch;
-  }
-  .lead{color:var(--muted);font-size:clamp(1rem,2.4vw,1.12rem);margin-top:16px;max-width:52ch}
+  h2.title{font-size:clamp(1.9rem,5.5vw,3.1rem);font-weight:600;letter-spacing:-.025em;line-height:1.04;margin:16px 0 0;max-width:18ch}
+  .lead{color:var(--muted);font-size:clamp(1rem,2.4vw,1.12rem);margin-top:16px;max-width:56ch}
 
-  /* ---------- NAV ---------- */
+  /* NAV */
   .nav{position:fixed;top:14px;left:0;right:0;z-index:60;display:flex;justify-content:center;pointer-events:none;padding:0 14px}
-  .nav-pill{
-    pointer-events:auto;display:flex;align-items:center;gap:6px;
-    background:rgba(255,255,255,.72);backdrop-filter:blur(16px) saturate(1.4);
-    -webkit-backdrop-filter:blur(16px) saturate(1.4);
-    border:1px solid var(--line);border-radius:999px;padding:7px 8px 7px 18px;
-    box-shadow:var(--shadow-sm);max-width:100%;
-  }
-  .nav-brand{font-weight:700;letter-spacing:-.02em;font-size:.95rem;white-space:nowrap;margin-right:6px}
-  .nav-brand span{color:var(--tiago)}
-  .nav-brand em{font-style:normal;color:var(--punch)}
+  .nav-pill{pointer-events:auto;display:flex;align-items:center;gap:6px;background:rgba(255,255,255,.72);backdrop-filter:blur(16px) saturate(1.4);-webkit-backdrop-filter:blur(16px) saturate(1.4);border:1px solid var(--line);border-radius:999px;padding:7px 8px 7px 18px;box-shadow:var(--shadow-sm);max-width:100%}
+  .nav-brand{font-weight:700;letter-spacing:-.02em;font-size:.9rem;white-space:nowrap;margin-right:6px}
+  .nav-brand span{color:var(--tiago)}.nav-brand em{font-style:normal;color:var(--punch)}.nav-brand b{font-weight:700;color:var(--i10)}
   .nav-links{display:none;gap:2px;align-items:center}
   .nav-links a{font-size:.83rem;color:var(--ink-soft);padding:8px 12px;border-radius:999px;transition:background .2s,color .2s;font-weight:500}
   .nav-links a:hover{background:var(--bone);color:var(--ink)}
-  .nav-cta{
-    font-size:.83rem;font-weight:600;background:var(--ink);color:#fff;
-    padding:9px 16px;border-radius:999px;white-space:nowrap;transition:transform .2s, background .2s;
-  }
+  .nav-cta{font-size:.83rem;font-weight:600;background:var(--ink);color:#fff;padding:9px 16px;border-radius:999px;white-space:nowrap;transition:transform .2s, background .2s}
   .nav-cta:hover{background:#000;transform:translateY(-1px)}
-  @media(min-width:860px){.nav-links{display:flex}}
+  @media(min-width:960px){.nav-links{display:flex}}
 
-  /* ---------- HERO ---------- */
-  .hero{padding:120px 0 40px;position:relative}
+  /* HERO */
+  .hero{padding:118px 0 40px;position:relative}
   .hero-mesh{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none}
-  .hero-mesh::before,.hero-mesh::after{content:"";position:absolute;border-radius:50%;filter:blur(90px);opacity:.5}
-  .hero-mesh::before{width:520px;height:520px;background:var(--tiago-wash);top:-120px;left:-80px}
-  .hero-mesh::after{width:520px;height:520px;background:var(--punch-wash);top:-40px;right:-120px}
+  .hero-mesh i{position:absolute;width:460px;height:460px;border-radius:50%;filter:blur(90px);opacity:.5}
+  .hero-mesh .m1{background:var(--tiago-wash);top:-120px;left:-80px}
+  .hero-mesh .m2{background:var(--punch-wash);top:-60px;left:38%}
+  .hero-mesh .m3{background:var(--i10-wash);top:-40px;right:-120px}
   .hero-inner{position:relative;z-index:1;text-align:center}
-  .hero-tag{
-    display:inline-flex;align-items:center;gap:8px;font-size:.76rem;font-weight:600;letter-spacing:.04em;
-    color:var(--ink-soft);background:var(--paper);border:1px solid var(--line);
-    padding:8px 16px;border-radius:999px;box-shadow:var(--shadow-sm);
-  }
-  .hero-tag .dot{width:7px;height:7px;border-radius:50%;background:var(--tiago);box-shadow:0 0 0 4px var(--tiago-wash)}
-  h1{
-    font-size:clamp(2.6rem,8.5vw,5.4rem);font-weight:600;letter-spacing:-.035em;line-height:.98;
-    margin:22px auto 0;max-width:15ch;
-  }
+  .hero-tag{display:inline-flex;align-items:center;gap:8px;font-size:.76rem;font-weight:600;letter-spacing:.04em;color:var(--ink-soft);background:var(--paper);border:1px solid var(--line);padding:8px 16px;border-radius:999px;box-shadow:var(--shadow-sm)}
+  .hero-tag .dot{width:7px;height:7px;border-radius:50%;background:var(--i10);box-shadow:0 0 0 4px var(--i10-wash)}
+  h1{font-size:clamp(2.4rem,7vw,4.8rem);font-weight:600;letter-spacing:-.035em;line-height:1;margin:22px auto 0;max-width:20ch}
   h1 .vs{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--muted);letter-spacing:0}
-  h1 .g{color:var(--tiago)}
-  h1 .p{color:var(--punch)}
-  .hero-lead{color:var(--muted);font-size:clamp(1.02rem,2.6vw,1.22rem);margin:22px auto 0;max-width:46ch}
+  h1 .g{color:var(--tiago)}h1 .p{color:var(--punch)}h1 .o{color:var(--i10)}
+  .hero-lead{color:var(--muted);font-size:clamp(1.02rem,2.6vw,1.22rem);margin:22px auto 0;max-width:52ch}
   .hero-ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:30px}
-  .btn{
-    display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:.95rem;
-    padding:14px 26px;border-radius:999px;transition:transform .22s cubic-bezier(.2,.8,.2,1),box-shadow .22s,background .2s;cursor:pointer;border:none;font-family:inherit;
-  }
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:.95rem;padding:14px 26px;border-radius:999px;transition:transform .22s cubic-bezier(.2,.8,.2,1),box-shadow .22s,background .2s;cursor:pointer;border:none;font-family:inherit}
   .btn-dark{background:var(--ink);color:#fff;box-shadow:var(--shadow-md)}
   .btn-dark:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg);background:#000}
   .btn-ghost{background:var(--paper);color:var(--ink);border:1px solid var(--line)}
   .btn-ghost:hover{transform:translateY(-2px);box-shadow:var(--shadow-sm)}
   .btn svg{width:16px;height:16px}
 
-  /* hero car duo */
-  .duo{display:grid;grid-template-columns:1fr;gap:18px;margin-top:54px}
-  @media(min-width:760px){.duo{grid-template-columns:1fr 1fr;gap:22px}}
-  .car-card{
-    position:relative;background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg);
-    padding:22px 22px 26px;box-shadow:var(--shadow-md);overflow:hidden;transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s;
-  }
+  /* car trio */
+  .trio{display:grid;grid-template-columns:1fr;gap:16px;margin-top:50px}
+  @media(min-width:680px){.trio{grid-template-columns:1fr 1fr}}
+  @media(min-width:940px){.trio{grid-template-columns:1fr 1fr 1fr;gap:20px}}
+  .car-card{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg);padding:20px 20px 24px;box-shadow:var(--shadow-md);overflow:hidden;transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s}
   .car-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
   .car-card.tiago{border-top:3px solid var(--tiago)}
   .car-card.punch{border-top:3px solid var(--punch)}
+  .car-card.i10{border-top:3px solid var(--i10)}
   .car-glow{position:absolute;top:-40%;left:50%;transform:translateX(-50%);width:80%;height:70%;border-radius:50%;filter:blur(60px);opacity:.55;z-index:0}
-  .tiago .car-glow{background:var(--tiago-wash)}
-  .punch .car-glow{background:var(--punch-wash)}
-  .car-head{display:flex;align-items:center;justify-content:space-between;position:relative;z-index:1}
-  .car-name{font-size:1.28rem;font-weight:700;letter-spacing:-.02em}
-  .car-name b{font-weight:700}
+  .tiago .car-glow{background:var(--tiago-wash)}.punch .car-glow{background:var(--punch-wash)}.i10 .car-glow{background:var(--i10-wash)}
+  .car-head{display:flex;align-items:center;justify-content:space-between;position:relative;z-index:1;gap:8px}
+  .car-name{font-size:1.16rem;font-weight:700;letter-spacing:-.02em}
   .tiago .car-name em{font-style:normal;color:var(--tiago)}
   .punch .car-name em{font-style:normal;color:var(--punch)}
-  .car-kind{font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--faint)}
+  .i10 .car-name em{font-style:normal;color:var(--i10)}
+  .car-kind{font-size:.66rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--faint);text-align:right}
   .car-img{position:relative;z-index:1;margin:6px 0 12px;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center}
-  .car-img img{transition:transform .6s cubic-bezier(.2,.8,.2,1);filter:drop-shadow(0 18px 22px rgba(23,24,28,.12))}
+  .car-img img{transition:transform .6s cubic-bezier(.2,.8,.2,1);filter:drop-shadow(0 16px 20px rgba(23,24,28,.12))}
   .car-card:hover .car-img img{transform:scale(1.045)}
-  .car-foot{display:flex;align-items:flex-end;justify-content:space-between;position:relative;z-index:1;gap:12px}
-  .price-from{font-size:.72rem;color:var(--muted);font-weight:500}
-  .price-big{font-size:1.5rem;font-weight:700;letter-spacing:-.02em;line-height:1.1}
-  .price-big small{font-size:.8rem;font-weight:600;color:var(--muted)}
-  .chip{font-size:.72rem;font-weight:600;padding:6px 11px;border-radius:999px;white-space:nowrap}
-  .tiago .chip{background:var(--tiago-wash);color:#0d6b41}
-  .punch .chip{background:var(--punch-wash);color:#3540a8}
+  .car-foot{display:flex;align-items:flex-end;justify-content:space-between;position:relative;z-index:1;gap:10px}
+  .price-from{font-size:.7rem;color:var(--muted);font-weight:500}
+  .price-big{font-size:1.42rem;font-weight:700;letter-spacing:-.02em;line-height:1.1}
+  .price-big small{font-size:.78rem;font-weight:600;color:var(--muted)}
+  .chip{font-size:.68rem;font-weight:600;padding:6px 10px;border-radius:999px;white-space:nowrap;text-align:center}
+  .tiago .chip{background:var(--tiago-wash);color:var(--tiago-deep)}
+  .punch .chip{background:var(--punch-wash);color:var(--punch-deep)}
+  .i10 .chip{background:var(--i10-wash);color:var(--i10-deep)}
 
-  /* ---------- reveal anim ---------- */
   .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.8,.2,1),transform .7s cubic-bezier(.2,.8,.2,1)}
   .reveal.in{opacity:1;transform:none}
   .reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}.reveal.d4{transition-delay:.32s}
 
-  /* ---------- section shell ---------- */
-  .band{padding:70px 0}
-  @media(min-width:820px){.band{padding:100px 0}}
-  .sec-head{margin-bottom:38px;max-width:720px}
+  .band{padding:66px 0}
+  @media(min-width:820px){.band{padding:96px 0}}
+  .sec-head{margin-bottom:36px;max-width:760px}
   .sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
   .sec-head.center h2.title{margin-left:auto;margin-right:auto}
   .sec-head.center .lead{margin-left:auto;margin-right:auto}
 
-  /* ---------- glance stats ---------- */
-  .glance{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-  @media(min-width:760px){.glance{grid-template-columns:repeat(4,1fr);gap:16px}}
-  .stat{
-    background:var(--paper);border:1px solid var(--line);border-radius:var(--r-md);padding:20px 18px;
-    box-shadow:var(--shadow-sm);transition:transform .3s,box-shadow .3s;
-  }
+  /* GLANCE — 3-way bars */
+  .glance{display:grid;grid-template-columns:1fr;gap:14px}
+  @media(min-width:620px){.glance{grid-template-columns:1fr 1fr}}
+  @media(min-width:980px){.glance{grid-template-columns:repeat(4,1fr);gap:16px}}
+  .stat{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-md);padding:20px 18px;box-shadow:var(--shadow-sm);transition:transform .3s,box-shadow .3s}
   .stat:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
-  .stat-label{font-size:.74rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--faint)}
-  .stat-row{display:flex;justify-content:space-between;align-items:baseline;margin-top:14px;gap:6px}
-  .stat-side{display:flex;flex-direction:column}
-  .stat-side .who{font-size:.68rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
-  .stat-side.t .who{color:var(--tiago)}.stat-side.p .who{color:var(--punch)}
-  .stat-side .num{font-size:1.32rem;font-weight:700;letter-spacing:-.02em}
-  .stat-side .unit{font-size:.7rem;color:var(--muted);font-weight:500}
-  .stat-side.p{text-align:right;align-items:flex-end}
-  .stat-vs{align-self:center;font-family:var(--serif);font-style:italic;color:var(--faint);font-size:.95rem}
+  .stat-label{font-size:.74rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--faint);display:flex;justify-content:space-between;align-items:baseline}
+  .stat-label .unit{font-size:.64rem;color:var(--faint);text-transform:none;letter-spacing:0}
+  .bars{margin-top:16px;display:flex;flex-direction:column;gap:12px}
+  .bar-row{display:grid;grid-template-columns:44px 1fr auto;align-items:center;gap:9px}
+  .bar-name{font-size:.7rem;font-weight:700;letter-spacing:.02em}
+  .bar-name.t{color:var(--tiago)}.bar-name.p{color:var(--punch)}.bar-name.i{color:var(--i10)}
+  .bar-track{height:8px;background:var(--bone);border-radius:999px;overflow:hidden;box-shadow:inset 0 0 0 1px var(--line-2)}
+  .bar-fill{height:100%;border-radius:999px;width:0;transition:width 1.1s cubic-bezier(.2,.8,.2,1)}
+  .bar-fill.t{background:var(--tiago)}.bar-fill.p{background:var(--punch)}.bar-fill.i{background:var(--i10)}
+  .bar-val{font-size:.82rem;font-weight:700;letter-spacing:-.01em;white-space:nowrap}
 
-  /* ---------- gallery viewer ---------- */
+  /* GALLERY */
   .viewer-tabs{display:inline-flex;gap:4px;background:var(--paper);border:1px solid var(--line);padding:5px;border-radius:999px;box-shadow:var(--shadow-sm);flex-wrap:wrap;justify-content:center}
-  .viewer-tabs button{
-    font-family:inherit;font-size:.85rem;font-weight:600;color:var(--muted);background:none;border:none;
-    padding:9px 18px;border-radius:999px;cursor:pointer;transition:color .2s,background .2s;
-  }
+  .viewer-tabs button{font-family:inherit;font-size:.85rem;font-weight:600;color:var(--muted);background:none;border:none;padding:9px 18px;border-radius:999px;cursor:pointer;transition:color .2s,background .2s}
   .viewer-tabs button.active{background:var(--ink);color:#fff}
-  .gallery{display:grid;grid-template-columns:1fr;gap:18px;margin-top:30px}
-  @media(min-width:760px){.gallery{grid-template-columns:1fr 1fr;gap:22px}}
-  .shot{
-    background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;
-    box-shadow:var(--shadow-md);position:relative;
-  }
-  .shot .shot-top{border-top:3px solid transparent}
-  .shot.t{border-top:3px solid var(--tiago)}
-  .shot.p{border-top:3px solid var(--punch)}
+  .gallery{display:grid;grid-template-columns:1fr;gap:16px;margin-top:28px}
+  @media(min-width:680px){.gallery{grid-template-columns:1fr 1fr}}
+  @media(min-width:980px){.gallery{grid-template-columns:1fr 1fr 1fr;gap:18px}}
+  .shot{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-md);position:relative}
+  .shot.t{border-top:3px solid var(--tiago)}.shot.p{border-top:3px solid var(--punch)}.shot.i{border-top:3px solid var(--i10)}
   .shot-media{aspect-ratio:16/9;background:linear-gradient(180deg,#fcfcfb,#f2f3f1);display:flex;align-items:center;justify-content:center;overflow:hidden}
   .shot-media img{width:100%;height:100%;object-fit:cover;transition:opacity .45s ease, transform .7s cubic-bezier(.2,.8,.2,1)}
   .shot:hover .shot-media img{transform:scale(1.03)}
-  .shot-cap{display:flex;align-items:center;justify-content:space-between;padding:14px 18px}
-  .shot-cap .nm{font-weight:700;font-size:1rem}
-  .shot.t .nm em{font-style:normal;color:var(--tiago)}
-  .shot.p .nm em{font-style:normal;color:var(--punch)}
-  .shot-cap .ang{font-size:.74rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--faint)}
+  .shot-cap{display:flex;align-items:center;justify-content:space-between;padding:13px 17px}
+  .shot-cap .nm{font-weight:700;font-size:.98rem}
+  .shot.t .nm em{font-style:normal;color:var(--tiago)}.shot.p .nm em{font-style:normal;color:var(--punch)}.shot.i .nm em{font-style:normal;color:var(--i10)}
+  .shot-cap .ang{font-size:.72rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--faint)}
 
-  /* ---------- colours ---------- */
-  .colors-grid{display:grid;grid-template-columns:1fr;gap:26px}
-  @media(min-width:820px){.colors-grid{grid-template-columns:1fr 1fr;gap:30px}}
-  .color-panel{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg);padding:26px;box-shadow:var(--shadow-md)}
-  .color-panel.t{border-top:3px solid var(--tiago)}
-  .color-panel.p{border-top:3px solid var(--punch)}
-  .color-panel h3{font-size:1.2rem;font-weight:700;letter-spacing:-.02em;display:flex;align-items:center;gap:10px}
-  .color-panel .cnt{font-size:.72rem;font-weight:600;color:#fff;padding:3px 9px;border-radius:999px}
-  .color-panel.t .cnt{background:var(--tiago)}.color-panel.p .cnt{background:var(--punch)}
-  .swatches{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
-  @media(min-width:520px){.swatches{grid-template-columns:repeat(4,1fr)}}
-  .sw{display:flex;flex-direction:column;align-items:center;gap:9px;cursor:default}
-  .sw-chip{
-    width:100%;aspect-ratio:1;border-radius:16px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.07), var(--shadow-sm);
-    position:relative;transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s;
-  }
-  .sw:hover .sw-chip{transform:translateY(-4px) scale(1.03);box-shadow:inset 0 0 0 1px rgba(0,0,0,.08), var(--shadow-md)}
-  .sw-chip.duo::after{content:"";position:absolute;top:0;left:0;right:0;height:34%;background:#1c1d21;border-radius:16px 16px 0 0;opacity:.92}
-  .sw-name{font-size:.78rem;font-weight:600;text-align:center;line-height:1.2;color:var(--ink-soft)}
-  .roof-note{margin-top:20px;font-size:.8rem;color:var(--muted);display:flex;align-items:center;gap:8px}
-  .roof-note .b{width:14px;height:14px;border-radius:4px;background:#1c1d21;display:inline-block}
-
-  /* ---------- spec table ---------- */
-  .spec-toggle{display:flex;justify-content:center;margin-bottom:26px}
+  /* SPEC TABLE — 4 col */
   .spec-wrap{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow-md);overflow:hidden}
-  .spec-hd{display:grid;grid-template-columns:1.1fr 1fr 1fr;position:sticky;top:0;background:var(--paper);z-index:5;border-bottom:1px solid var(--line)}
-  .spec-hd>div{padding:18px 16px;font-weight:700}
-  .spec-hd .lbl{color:var(--faint);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;align-self:center;font-weight:600}
+  .spec-hd,.row{display:grid;grid-template-columns:1fr .82fr .82fr .82fr}
+  .spec-hd{position:sticky;top:0;background:var(--paper);z-index:5;border-bottom:1px solid var(--line)}
+  .spec-hd>div{padding:16px 12px;font-weight:700}
+  .spec-hd .lbl{color:var(--faint);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;align-self:center;font-weight:600}
   .spec-hd .car{display:flex;flex-direction:column;gap:2px;align-items:center;text-align:center}
-  .spec-hd .car .nm{font-size:1.02rem}
-  .spec-hd .car.t .nm em,.spec-hd .car.t{color:var(--tiago)}
-  .spec-hd .car.p .nm em,.spec-hd .car.p{color:var(--punch)}
-  .spec-hd .car .sub{font-size:.68rem;color:var(--muted);font-weight:500;letter-spacing:.02em}
-  .spec-cat{background:var(--bone);padding:12px 16px;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);border-top:1px solid var(--line-2)}
-  .row{display:grid;grid-template-columns:1.1fr 1fr 1fr;border-top:1px solid var(--line-2);transition:background .2s}
+  .spec-hd .car .nm{font-size:.96rem}
+  .spec-hd .car.t .nm em{font-style:normal;color:var(--tiago)}
+  .spec-hd .car.p .nm em{font-style:normal;color:var(--punch)}
+  .spec-hd .car.i .nm em{font-style:normal;color:var(--i10)}
+  .spec-hd .car .sub{font-size:.66rem;color:var(--muted);font-weight:500}
+  .spec-cat{background:var(--bone);padding:11px 14px;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);border-top:1px solid var(--line-2)}
+  .row{border-top:1px solid var(--line-2);transition:background .2s}
   .row:hover{background:#fcfcfb}
-  .row>div{padding:15px 16px;font-size:.92rem;display:flex;align-items:center}
-  .row .k{color:var(--muted);font-weight:500;font-size:.85rem}
+  .row>div{padding:14px 12px;font-size:.88rem;display:flex;align-items:center}
+  .row .k{color:var(--muted);font-weight:500;font-size:.82rem}
   .row .v{justify-content:center;text-align:center;font-weight:600;flex-direction:column;gap:3px;position:relative}
-  .row .v .sub{font-size:.72rem;color:var(--faint);font-weight:500}
-  .row .v.win::after{content:"";position:absolute;left:10px;top:50%;transform:translateY(-50%);width:5px;height:5px;border-radius:50%}
-  .row .v.win.t::after{background:var(--tiago)}
-  .row .v.win.p::after{background:var(--punch)}
-  .row .v.win.t{color:#0d6b41}.row .v.win.p{color:#3540a8}
-  .legend{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:18px;font-size:.78rem;color:var(--muted)}
+  .row .v .sub{font-size:.7rem;color:var(--faint);font-weight:500}
+  .row .v.na{color:var(--faint);font-weight:500}
+  .row .v.win::after{content:"";position:absolute;left:6px;top:50%;transform:translateY(-50%);width:5px;height:5px;border-radius:50%}
+  .row .v.win.t::after{background:var(--tiago)}.row .v.win.p::after{background:var(--punch)}.row .v.win.i::after{background:var(--i10)}
+  .row .v.win.t{color:var(--tiago-deep)}.row .v.win.p{color:var(--punch-deep)}.row .v.win.i{color:var(--i10-deep)}
+  .legend{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:18px;font-size:.76rem;color:var(--muted)}
   .legend span{display:inline-flex;align-items:center;gap:7px}
   .legend .d{width:6px;height:6px;border-radius:50%}
-  .legend .d.t{background:var(--tiago)}.legend .d.p{background:var(--punch)}
-  @media(max-width:640px){
+  .legend .d.t{background:var(--tiago)}.legend .d.p{background:var(--punch)}.legend .d.i{background:var(--i10)}
+  @media(max-width:680px){
     .spec-hd .car .sub{display:none}
-    .row>div,.spec-hd>div{padding:12px 9px}
-    .row .k{font-size:.78rem}
-    .row .v{font-size:.82rem}
-    .row .v.win::after{left:3px}
+    .row>div,.spec-hd>div{padding:11px 6px}
+    .row .k{font-size:.72rem}
+    .row .v{font-size:.74rem}
+    .row .v .sub{font-size:.62rem}
+    .spec-hd .car .nm{font-size:.8rem}
+    .row .v.win::after{left:1px;width:4px;height:4px}
   }
 
-  /* ---------- variants ---------- */
-  .var-grid{display:grid;grid-template-columns:1fr;gap:26px}
-  @media(min-width:820px){.var-grid{grid-template-columns:1fr 1fr;gap:30px}}
-  .var-panel{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg);padding:8px;box-shadow:var(--shadow-md);overflow:hidden}
-  .var-panel.t{border-top:3px solid var(--tiago)}.var-panel.p{border-top:3px solid var(--punch)}
-  .var-title{padding:18px 18px 6px;font-weight:700;font-size:1.12rem;display:flex;align-items:center;justify-content:space-between}
-  .var-title.t em,.var-title.p em{font-style:normal}
-  .var-title.t em{color:var(--tiago)}.var-title.p em{color:var(--punch)}
-  .var-item{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-radius:var(--r-sm);transition:background .2s}
-  .var-item:hover{background:var(--bone)}
-  .var-item .vn{font-weight:600;font-size:.92rem}
-  .var-item .vb{font-size:.72rem;color:var(--muted);margin-top:2px}
-  .var-item .vp{font-weight:700;font-size:.98rem;white-space:nowrap}
-  .var-note{padding:12px 18px 16px;font-size:.74rem;color:var(--faint)}
+  /* panels shared (colours + variants) */
+  .grid3{display:grid;grid-template-columns:1fr;gap:22px}
+  @media(min-width:700px){.grid3{grid-template-columns:1fr 1fr}}
+  @media(min-width:1040px){.grid3{grid-template-columns:1fr 1fr 1fr;gap:24px}}
+  .panel{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow-md)}
+  .panel.t{border-top:3px solid var(--tiago)}.panel.p{border-top:3px solid var(--punch)}.panel.i{border-top:3px solid var(--i10)}
+  .panel-h{display:flex;align-items:center;justify-content:space-between;padding:22px 22px 4px;font-size:1.12rem;font-weight:700;letter-spacing:-.02em}
+  .panel-h em{font-style:normal}
+  .panel.t .panel-h em{color:var(--tiago)}.panel.p .panel-h em{color:var(--punch)}.panel.i .panel-h em{color:var(--i10)}
+  .cnt{font-size:.68rem;font-weight:600;color:#fff;padding:3px 9px;border-radius:999px}
+  .panel.t .cnt{background:var(--tiago)}.panel.p .cnt{background:var(--punch)}.panel.i .cnt{background:var(--i10)}
 
-  /* ---------- features ---------- */
+  /* colours */
+  .swatches{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding:20px 22px 8px}
+  .sw{display:flex;flex-direction:column;align-items:center;gap:8px}
+  .sw-chip{width:100%;aspect-ratio:1;border-radius:14px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.07), var(--shadow-sm);position:relative;transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s}
+  .sw:hover .sw-chip{transform:translateY(-4px) scale(1.03);box-shadow:inset 0 0 0 1px rgba(0,0,0,.08), var(--shadow-md)}
+  .sw-chip.duo::after{content:"";position:absolute;top:0;left:0;right:0;height:34%;background:#1c1d21;border-radius:14px 14px 0 0;opacity:.92}
+  .sw-name{font-size:.74rem;font-weight:600;text-align:center;line-height:1.2;color:var(--ink-soft)}
+  .roof-note{padding:8px 22px 22px;font-size:.76rem;color:var(--muted);display:flex;align-items:center;gap:8px}
+  .roof-note .b{width:13px;height:13px;border-radius:4px;background:#1c1d21;display:inline-block;flex-shrink:0}
+
+  /* variants */
+  .var-item{display:flex;align-items:center;justify-content:space-between;padding:13px 22px;transition:background .2s;gap:10px}
+  .var-item:hover{background:var(--bone)}
+  .var-item .vn{font-weight:600;font-size:.9rem}
+  .var-item .vb{font-size:.7rem;color:var(--muted);margin-top:2px}
+  .var-item .vp{font-weight:700;font-size:.94rem;white-space:nowrap}
+  .var-note{padding:10px 22px 20px;font-size:.72rem;color:var(--faint)}
+
+  /* features */
   .feat-grid{display:grid;grid-template-columns:1fr;gap:16px}
-  @media(min-width:760px){.feat-grid{grid-template-columns:repeat(3,1fr)}}
-  .feat-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-md);padding:24px;box-shadow:var(--shadow-sm);transition:transform .3s,box-shadow .3s}
+  @media(min-width:640px){.feat-grid{grid-template-columns:1fr 1fr}}
+  @media(min-width:1100px){.feat-grid{grid-template-columns:repeat(4,1fr)}}
+  .feat-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-md);padding:22px;box-shadow:var(--shadow-sm);transition:transform .3s,box-shadow .3s}
   .feat-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
-  .feat-card h4{font-size:1rem;font-weight:700;display:flex;align-items:center;gap:9px;margin-bottom:16px}
-  .feat-card h4 .tag{font-size:.64rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:6px;color:#fff}
+  .feat-card h4{font-size:.98rem;font-weight:700;display:flex;align-items:center;gap:9px;margin-bottom:15px;flex-wrap:wrap}
+  .feat-card h4 .tag{font-size:.6rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:6px;color:#fff}
   .feat-card.shared h4 .tag{background:var(--ink)}
   .feat-card.t h4 .tag{background:var(--tiago)}
   .feat-card.p h4 .tag{background:var(--punch)}
-  .feat-list{list-style:none;display:flex;flex-direction:column;gap:11px}
-  .feat-list li{display:flex;gap:10px;font-size:.88rem;color:var(--ink-soft);line-height:1.4}
-  .feat-list li svg{width:16px;height:16px;flex-shrink:0;margin-top:2px}
-  .feat-card.shared svg{color:var(--ink)}.feat-card.t svg{color:var(--tiago)}.feat-card.p svg{color:var(--punch)}
+  .feat-card.i h4 .tag{background:var(--i10)}
+  .feat-list{list-style:none;display:flex;flex-direction:column;gap:10px}
+  .feat-list li{display:flex;gap:9px;font-size:.85rem;color:var(--ink-soft);line-height:1.4}
+  .feat-list li svg{width:15px;height:15px;flex-shrink:0;margin-top:3px}
+  .feat-card.shared svg{color:var(--ink)}.feat-card.t svg{color:var(--tiago)}.feat-card.p svg{color:var(--punch)}.feat-card.i svg{color:var(--i10)}
 
-  /* ---------- decide ---------- */
-  .decide{background:var(--ink);border-radius:var(--r-lg);padding:clamp(30px,6vw,60px);color:#fff;box-shadow:var(--shadow-lg);position:relative;overflow:hidden}
+  /* decide */
+  .decide{background:var(--ink);border-radius:var(--r-lg);padding:clamp(28px,6vw,58px);color:#fff;box-shadow:var(--shadow-lg);position:relative;overflow:hidden}
   .decide-mesh{position:absolute;inset:0;opacity:.4;pointer-events:none}
-  .decide-mesh::before,.decide-mesh::after{content:"";position:absolute;width:360px;height:360px;border-radius:50%;filter:blur(80px)}
-  .decide-mesh::before{background:rgba(21,154,94,.5);top:-120px;left:-60px}
-  .decide-mesh::after{background:rgba(75,88,214,.5);bottom:-140px;right:-40px}
+  .decide-mesh i{position:absolute;width:340px;height:340px;border-radius:50%;filter:blur(80px)}
+  .decide-mesh .a{background:rgba(21,154,94,.5);top:-120px;left:-60px}
+  .decide-mesh .b{background:rgba(75,88,214,.5);bottom:-140px;left:40%}
+  .decide-mesh .c{background:rgba(217,122,43,.5);top:-60px;right:-40px}
   .decide-in{position:relative;z-index:1}
   .decide h2{font-size:clamp(1.7rem,4.6vw,2.6rem);font-weight:600;letter-spacing:-.025em;line-height:1.05}
-  .decide .sub{color:rgba(255,255,255,.68);margin-top:14px;max-width:44ch;font-size:1.02rem}
-  .prio{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
-  .prio button{
-    font-family:inherit;font-size:.85rem;font-weight:600;color:rgba(255,255,255,.82);
-    background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);
-    padding:11px 18px;border-radius:999px;cursor:pointer;transition:all .22s;
-  }
+  .decide .sub{color:rgba(255,255,255,.68);margin-top:14px;max-width:48ch;font-size:1.02rem}
+  .prio{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+  .prio button{font-family:inherit;font-size:.84rem;font-weight:600;color:rgba(255,255,255,.82);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);padding:11px 18px;border-radius:999px;cursor:pointer;transition:all .22s}
   .prio button:hover{background:rgba(255,255,255,.16);color:#fff;transform:translateY(-2px)}
   .prio button.active{background:#fff;color:var(--ink);border-color:#fff}
-  .verdict{
-    margin-top:30px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);
-    border-radius:var(--r-md);padding:26px;min-height:130px;display:flex;flex-direction:column;justify-content:center;
-    transition:opacity .35s;
-  }
-  .verdict .winner{display:inline-flex;align-items:center;gap:10px;font-size:1.35rem;font-weight:700;letter-spacing:-.02em}
-  .verdict .winner .badge{font-size:.66rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:999px;color:#fff}
-  .verdict .winner.t .badge{background:var(--tiago)}.verdict .winner.p .badge{background:var(--punch)}
-  .verdict .winner.t em{font-style:normal;color:#5fd39c}.verdict .winner.p em{font-style:normal;color:#a3abf5}
-  .verdict .why{color:rgba(255,255,255,.72);margin-top:12px;font-size:.96rem;line-height:1.5}
+  .verdict{margin-top:28px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:var(--r-md);padding:26px;min-height:132px;display:flex;flex-direction:column;justify-content:center;transition:opacity .35s}
+  .verdict .winner{display:inline-flex;align-items:center;gap:10px;font-size:1.32rem;font-weight:700;letter-spacing:-.02em;flex-wrap:wrap}
+  .verdict .winner .badge{font-size:.64rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:999px;color:#fff}
+  .verdict .winner.t .badge{background:var(--tiago)}.verdict .winner.p .badge{background:var(--punch)}.verdict .winner.i .badge{background:var(--i10)}
+  .verdict .winner.t em{font-style:normal;color:#5fd39c}.verdict .winner.p em{font-style:normal;color:#a3abf5}.verdict .winner.i em{font-style:normal;color:#f0b47e}
+  .verdict .why{color:rgba(255,255,255,.72);margin-top:12px;font-size:.95rem;line-height:1.5}
 
-  /* ---------- footer ---------- */
-  footer{padding:56px 0 40px;border-top:1px solid var(--line);margin-top:20px}
+  footer{padding:54px 0 40px;border-top:1px solid var(--line);margin-top:20px}
   .foot-top{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:flex-start}
-  .foot-brand{font-weight:700;font-size:1.1rem;letter-spacing:-.02em}
-  .foot-brand span{color:var(--tiago)}.foot-brand em{font-style:normal;color:var(--punch)}
+  .foot-brand{font-weight:700;font-size:1.05rem;letter-spacing:-.02em}
+  .foot-brand span{color:var(--tiago)}.foot-brand em{font-style:normal;color:var(--punch)}.foot-brand b{color:var(--i10)}
   .foot-note{font-size:.8rem;color:var(--muted);max-width:52ch;margin-top:10px;line-height:1.6}
   .foot-src{font-size:.78rem;color:var(--faint);margin-top:8px}
   .foot-src a{color:var(--muted);border-bottom:1px solid var(--line);transition:color .2s}
   .foot-src a:hover{color:var(--ink)}
-  .disclaimer{font-size:.74rem;color:var(--faint);margin-top:28px;line-height:1.6;border-top:1px solid var(--line-2);padding-top:20px}
+  .disclaimer{font-size:.73rem;color:var(--faint);margin-top:26px;line-height:1.6;border-top:1px solid var(--line-2);padding-top:20px}
 
   @media(prefers-reduced-motion:reduce){
     *{transition:none!important;animation:none!important}
     .reveal{opacity:1;transform:none}
+    .bar-fill{transition:none}
     html{scroll-behavior:auto}
   }
 </style>
 </head>
 <body>
-<!-- NAV -->
 <nav class="nav">
   <div class="nav-pill">
-    <a href="#top" class="nav-brand"><span>Tiago</span>.ev <em>vs</em> Punch.ev</a>
+    <a href="#top" class="nav-brand"><span>Tiago</span> · <em>Punch</em> · <b>i10</b></a>
     <div class="nav-links">
       <a href="#glance">At a glance</a>
       <a href="#gallery">Gallery</a>
@@ -346,108 +289,101 @@
 </nav>
 
 <main id="top">
-<!-- HERO -->
 <section class="hero">
-  <div class="hero-mesh"></div>
+  <div class="hero-mesh"><i class="m1"></i><i class="m2"></i><i class="m3"></i></div>
   <div class="wrap hero-inner">
-    <span class="hero-tag reveal"><span class="dot"></span>Two Tata EVs · 2026 · India</span>
-    <h1 class="reveal d1">The <span class="g">Tiago.ev</span> <span class="vs">or</span> the <span class="p">Punch.ev</span>?</h1>
-    <p class="hero-lead reveal d2">Everything your family needs to decide between Tata's most affordable hatchback EV and its compact electric SUV — specs, range, prices, colours and features, side by side.</p>
+    <span class="hero-tag reveal"><span class="dot"></span>Two EVs &amp; a petrol hatch · 2026 · India</span>
+    <h1 class="reveal d1">The <span class="g">Tiago.ev</span>, the <span class="p">Punch.ev</span> <span class="vs">or</span> the <span class="o">Grand i10</span>?</h1>
+    <p class="hero-lead reveal d2">Two Tata electrics against Hyundai's petrol favourite — specs, range and mileage, prices, colours and features, side by side by side. Electric or petrol, decide as a family.</p>
     <div class="hero-ctas reveal d3">
-      <a href="#glance" class="btn btn-dark">Compare them
+      <a href="#glance" class="btn btn-dark">Compare all three
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
       </a>
       <a href="#decide" class="btn btn-ghost">Which suits us?</a>
     </div>
 
-    <div class="duo">
-      <div class="car-card tiago reveal d2">
+    <div class="trio">
+      <div class="car-card tiago reveal d1">
         <div class="car-glow"></div>
-        <div class="car-head">
-          <div class="car-name"><em>Tiago</em>.ev</div>
-          <div class="car-kind">Electric Hatchback</div>
-        </div>
-        <div class="car-img"><img src="assets/tiago_front.webp" alt="Tata Tiago.ev front three-quarter view in Dehradun Dew green" loading="eager" width="1056" height="594"/></div>
+        <div class="car-head"><div class="car-name"><em>Tiago</em>.ev</div><div class="car-kind">Electric<br/>Hatchback</div></div>
+        <div class="car-img"><img src="assets/tiago_front.webp" alt="Tata Tiago.ev front three-quarter" loading="eager" width="1056" height="594"/></div>
         <div class="car-foot">
-          <div>
-            <div class="price-from">From (ex-showroom)</div>
-            <div class="price-big">₹<span class="ctr" data-to="6.99" data-dec="2">0</span> <small>lakh</small></div>
-          </div>
+          <div><div class="price-from">From (ex-showroom)</div><div class="price-big">₹6.99 <small>L</small></div></div>
           <div class="chip">Up to 285 km</div>
         </div>
       </div>
-
-      <div class="car-card punch reveal d3">
+      <div class="car-card punch reveal d2">
         <div class="car-glow"></div>
-        <div class="car-head">
-          <div class="car-name"><em>Punch</em>.ev</div>
-          <div class="car-kind">Electric SUV</div>
-        </div>
-        <div class="car-img"><img src="assets/punch_front.webp" alt="Tata Punch.ev front three-quarter view in grey" loading="eager" width="1056" height="594"/></div>
+        <div class="car-head"><div class="car-name"><em>Punch</em>.ev</div><div class="car-kind">Electric<br/>SUV</div></div>
+        <div class="car-img"><img src="assets/punch_front.webp" alt="Tata Punch.ev front three-quarter" loading="eager" width="1056" height="594"/></div>
         <div class="car-foot">
-          <div>
-            <div class="price-from">From (ex-showroom)</div>
-            <div class="price-big">₹<span class="ctr" data-to="9.69" data-dec="2">0</span> <small>lakh</small></div>
-          </div>
+          <div><div class="price-from">From (ex-showroom)</div><div class="price-big">₹9.69 <small>L</small></div></div>
           <div class="chip">Up to 468 km</div>
+        </div>
+      </div>
+      <div class="car-card i10 reveal d3">
+        <div class="car-glow"></div>
+        <div class="car-head"><div class="car-name">Grand <em>i10</em></div><div class="car-kind">Petrol<br/>Hatchback</div></div>
+        <div class="car-img"><img src="assets/i10_front.webp" alt="Hyundai Grand i10 Nios front three-quarter" loading="eager" width="1056" height="594"/></div>
+        <div class="car-foot">
+          <div><div class="price-from">From (ex-showroom)</div><div class="price-big">₹5.60 <small>L</small></div></div>
+          <div class="chip">~20.7 kmpl</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- AT A GLANCE -->
 <section class="band" id="glance">
   <div class="wrap">
     <div class="sec-head center reveal">
       <span class="eyebrow">The short version</span>
       <h2 class="title">Four numbers that shape the choice</h2>
-      <p class="lead">The Punch is bigger, goes further and adds more power; the Tiago is lighter on the wallet and easier to park. Here is where each pulls ahead.</p>
+      <p class="lead">The i10 is the cheapest to buy and goes furthest between fills; the Punch is the biggest and most powerful; the Tiago sits in between as the value EV.</p>
     </div>
     <div class="glance">
       <div class="stat reveal">
-        <div class="stat-label">Starting price</div>
-        <div class="stat-row">
-          <div class="stat-side t"><span class="who">Tiago</span><span class="num">₹6.99<span class="unit"> L</span></span></div>
-          <div class="stat-vs">vs</div>
-          <div class="stat-side p"><span class="who">Punch</span><span class="num">₹9.69<span class="unit"> L</span></span></div>
+        <div class="stat-label"><span>Starting price</span><span class="unit">₹ lakh · lower is cheaper</span></div>
+        <div class="bars">
+          <div class="bar-row"><span class="bar-name i">i10</span><div class="bar-track"><div class="bar-fill i" data-w="58"></div></div><span class="bar-val">₹5.60</span></div>
+          <div class="bar-row"><span class="bar-name t">Tiago</span><div class="bar-track"><div class="bar-fill t" data-w="72"></div></div><span class="bar-val">₹6.99</span></div>
+          <div class="bar-row"><span class="bar-name p">Punch</span><div class="bar-track"><div class="bar-fill p" data-w="100"></div></div><span class="bar-val">₹9.69</span></div>
         </div>
       </div>
       <div class="stat reveal d1">
-        <div class="stat-label">Max range</div>
-        <div class="stat-row">
-          <div class="stat-side t"><span class="who">Tiago</span><span class="num">285<span class="unit"> km</span></span></div>
-          <div class="stat-vs">vs</div>
-          <div class="stat-side p"><span class="who">Punch</span><span class="num">468<span class="unit"> km</span></span></div>
+        <div class="stat-label"><span>Range per fill / charge</span><span class="unit">km · higher is farther</span></div>
+        <div class="bars">
+          <div class="bar-row"><span class="bar-name t">Tiago</span><div class="bar-track"><div class="bar-fill t" data-w="37"></div></div><span class="bar-val">285</span></div>
+          <div class="bar-row"><span class="bar-name p">Punch</span><div class="bar-track"><div class="bar-fill p" data-w="61"></div></div><span class="bar-val">468</span></div>
+          <div class="bar-row"><span class="bar-name i">i10</span><div class="bar-track"><div class="bar-fill i" data-w="100"></div></div><span class="bar-val">~765</span></div>
         </div>
       </div>
       <div class="stat reveal d2">
-        <div class="stat-label">Boot space</div>
-        <div class="stat-row">
-          <div class="stat-side t"><span class="who">Tiago</span><span class="num">240<span class="unit"> L</span></span></div>
-          <div class="stat-vs">vs</div>
-          <div class="stat-side p"><span class="who">Punch</span><span class="num">366<span class="unit"> L</span></span></div>
+        <div class="stat-label"><span>Boot space</span><span class="unit">litres · higher is bigger</span></div>
+        <div class="bars">
+          <div class="bar-row"><span class="bar-name t">Tiago</span><div class="bar-track"><div class="bar-fill t" data-w="66"></div></div><span class="bar-val">240</span></div>
+          <div class="bar-row"><span class="bar-name i">i10</span><div class="bar-track"><div class="bar-fill i" data-w="71"></div></div><span class="bar-val">260</span></div>
+          <div class="bar-row"><span class="bar-name p">Punch</span><div class="bar-track"><div class="bar-fill p" data-w="100"></div></div><span class="bar-val">366</span></div>
         </div>
       </div>
       <div class="stat reveal d3">
-        <div class="stat-label">Peak power</div>
-        <div class="stat-row">
-          <div class="stat-side t"><span class="who">Tiago</span><span class="num">75<span class="unit"> hp</span></span></div>
-          <div class="stat-vs">vs</div>
-          <div class="stat-side p"><span class="who">Punch</span><span class="num">127<span class="unit"> hp</span></span></div>
+        <div class="stat-label"><span>Peak power</span><span class="unit">hp · higher is stronger</span></div>
+        <div class="bars">
+          <div class="bar-row"><span class="bar-name t">Tiago</span><div class="bar-track"><div class="bar-fill t" data-w="59"></div></div><span class="bar-val">75</span></div>
+          <div class="bar-row"><span class="bar-name i">i10</span><div class="bar-track"><div class="bar-fill i" data-w="65"></div></div><span class="bar-val">82</span></div>
+          <div class="bar-row"><span class="bar-name p">Punch</span><div class="bar-track"><div class="bar-fill p" data-w="100"></div></div><span class="bar-val">127</span></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- GALLERY -->
 <section class="band" id="gallery" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap">
     <div class="sec-head center reveal">
       <span class="eyebrow">See them from every angle</span>
-      <h2 class="title">A proper look, side by side</h2>
-      <p class="lead">Switch angles and view both cars together — front, side, rear and interior. Official Tata studio photography.</p>
+      <h2 class="title">A proper look, side by side by side</h2>
+      <p class="lead">Switch angles and view all three together — front, side, rear and interior. Official studio and press photography.</p>
     </div>
     <div style="display:flex;justify-content:center" class="reveal d1">
       <div class="viewer-tabs" id="viewerTabs">
@@ -458,81 +394,74 @@
       </div>
     </div>
     <div class="gallery">
-      <div class="shot t reveal d1">
-        <div class="shot-media"><img id="imgTiago" src="assets/tiago_front.webp" alt="Tata Tiago.ev" width="1056" height="594"/></div>
-        <div class="shot-cap"><span class="nm"><em>Tiago</em>.ev</span><span class="ang" id="angTiago">Front</span></div>
-      </div>
-      <div class="shot p reveal d2">
-        <div class="shot-media"><img id="imgPunch" src="assets/punch_front.webp" alt="Tata Punch.ev" width="1056" height="594"/></div>
-        <div class="shot-cap"><span class="nm"><em>Punch</em>.ev</span><span class="ang" id="angPunch">Front</span></div>
-      </div>
+      <div class="shot t reveal d1"><div class="shot-media"><img id="imgTiago" src="assets/tiago_front.webp" alt="Tata Tiago.ev" width="1056" height="594"/></div><div class="shot-cap"><span class="nm"><em>Tiago</em>.ev</span><span class="ang" id="angTiago">Front</span></div></div>
+      <div class="shot p reveal d2"><div class="shot-media"><img id="imgPunch" src="assets/punch_front.webp" alt="Tata Punch.ev" width="1056" height="594"/></div><div class="shot-cap"><span class="nm"><em>Punch</em>.ev</span><span class="ang" id="angPunch">Front</span></div></div>
+      <div class="shot i reveal d3"><div class="shot-media"><img id="imgI10" src="assets/i10_front.webp" alt="Hyundai Grand i10 Nios" width="1056" height="594"/></div><div class="shot-cap"><span class="nm">Grand <em>i10</em></span><span class="ang" id="angI10">Front</span></div></div>
     </div>
   </div>
 </section>
 
-<!-- SPECS -->
 <section class="band" id="specs">
   <div class="wrap">
     <div class="sec-head center reveal">
       <span class="eyebrow">The full spec sheet</span>
       <h2 class="title">Every number that matters</h2>
-      <p class="lead">Battery, range, charging, motor, size and safety — all verified against Tata's official EV pages and leading Indian auto sources.</p>
+      <p class="lead">Powertrain, range and mileage, size, safety and price — verified against Tata and Hyundai official pages and leading Indian auto sources.</p>
     </div>
     <div class="spec-wrap reveal d1">
       <div class="spec-hd">
         <div class="lbl">Specification</div>
-        <div class="car t"><span class="nm"><em>Tiago</em>.ev</span><span class="sub">Electric Hatchback</span></div>
-        <div class="car p"><span class="nm"><em>Punch</em>.ev</span><span class="sub">Electric SUV</span></div>
+        <div class="car t"><span class="nm"><em>Tiago</em>.ev</span><span class="sub">EV hatch</span></div>
+        <div class="car p"><span class="nm"><em>Punch</em>.ev</span><span class="sub">EV SUV</span></div>
+        <div class="car i"><span class="nm">Grand <em>i10</em></span><span class="sub">Petrol hatch</span></div>
       </div>
 
-      <div class="spec-cat">Battery &amp; Range</div>
-      <div class="row"><div class="k">Battery packs</div><div class="v">19.2 &amp; 24 kWh<span class="sub">Li-ion</span></div><div class="v">30 &amp; 40 kWh<span class="sub">LFP prismatic</span></div></div>
-      <div class="row"><div class="k">Certified range (top)</div><div class="v">285 km<span class="sub">24 kWh · P1+P2</span></div><div class="v win p">468 km<span class="sub">40 kWh · P1+P2</span></div></div>
-      <div class="row"><div class="k">Entry range</div><div class="v">226 km<span class="sub">19.2 kWh · ARAI</span></div><div class="v win p">365–375 km<span class="sub">30 kWh · ARAI</span></div></div>
-      <div class="row"><div class="k">Real-world (top pack)</div><div class="v">~200–230 km<span class="sub">tested</span></div><div class="v win p">~355 km<span class="sub">C75 cycle</span></div></div>
+      <div class="spec-cat">Powertrain</div>
+      <div class="row"><div class="k">Type</div><div class="v">Electric</div><div class="v">Electric</div><div class="v">Petrol (+CNG)</div></div>
+      <div class="row"><div class="k">Battery / Engine</div><div class="v">19.2 &amp; 24 kWh</div><div class="v">30 &amp; 40 kWh</div><div class="v">1.2L Kappa</div></div>
+      <div class="row"><div class="k">Peak power</div><div class="v">61–75 hp</div><div class="v win p">87–127 hp</div><div class="v">82 hp</div></div>
+      <div class="row"><div class="k">Torque</div><div class="v">110–114 Nm</div><div class="v win p">154 Nm</div><div class="v">114 Nm</div></div>
+      <div class="row"><div class="k">Transmission</div><div class="v">Single-speed</div><div class="v">Single-speed</div><div class="v">5MT / 5-AMT</div></div>
 
-      <div class="spec-cat">Charging</div>
-      <div class="row"><div class="k">DC fast charging</div><div class="v">100 km in ~18 min</div><div class="v win p">20–80% in 26 min<span class="sub">65 kW · 135 km/15 min</span></div></div>
-      <div class="row"><div class="k">AC home charging</div><div class="v">3.3 / 7.2 kW</div><div class="v">3.3 / 7.2 kW<span class="sub">~4.5 h (30 kWh)</span></div></div>
-
-      <div class="spec-cat">Performance</div>
-      <div class="row"><div class="k">Peak power</div><div class="v">61 – 75 hp</div><div class="v win p">87 – 127 hp</div></div>
-      <div class="row"><div class="k">Torque</div><div class="v">110 – 114 Nm</div><div class="v win p">154 Nm</div></div>
-      <div class="row"><div class="k">0–100 km/h</div><div class="v">—</div><div class="v win p">9.0 s<span class="sub">40 kWh</span></div></div>
+      <div class="spec-cat">Range, Mileage &amp; Refuelling</div>
+      <div class="row"><div class="k">Certified range / mileage</div><div class="v">226–285 km</div><div class="v">365–468 km</div><div class="v">~20.7 kmpl<span class="sub">ARAI, MT</span></div></div>
+      <div class="row"><div class="k">Range per fill / charge</div><div class="v">~285 km</div><div class="v">~468 km</div><div class="v win i">~765 km<span class="sub">37 L tank</span></div></div>
+      <div class="row"><div class="k">Refuel / recharge</div><div class="v">DC: +100 km/18 min</div><div class="v">DC: 20–80%/26 min</div><div class="v win i">Petrol: ~3 min</div></div>
+      <div class="row"><div class="k">Running cost</div><div class="v win t">Lowest (electric)</div><div class="v win t">Lowest (electric)</div><div class="v">Higher (petrol)</div></div>
 
       <div class="spec-cat">Dimensions &amp; Practicality</div>
-      <div class="row"><div class="k">Length</div><div class="v win t">3,825 mm<span class="sub">compact</span></div><div class="v">3,880 mm</div></div>
-      <div class="row"><div class="k">Width</div><div class="v">1,684 mm</div><div class="v win p">1,742 mm</div></div>
-      <div class="row"><div class="k">Height</div><div class="v">1,562 mm</div><div class="v win p">1,622 mm</div></div>
-      <div class="row"><div class="k">Wheelbase</div><div class="v">2,400 mm</div><div class="v win p">2,445 mm</div></div>
-      <div class="row"><div class="k">Boot space</div><div class="v">240 L</div><div class="v win p">366 L</div></div>
-      <div class="row"><div class="k">Ground clearance</div><div class="v">—</div><div class="v win p">195 mm</div></div>
-      <div class="row"><div class="k">Wheels</div><div class="v">14-inch</div><div class="v win p">16-inch diamond-cut alloy</div></div>
+      <div class="row"><div class="k">Length</div><div class="v">3,825 mm</div><div class="v">3,880 mm</div><div class="v win i">3,815 mm<span class="sub">most compact</span></div></div>
+      <div class="row"><div class="k">Width</div><div class="v">1,684 mm</div><div class="v win p">1,742 mm</div><div class="v">1,680 mm</div></div>
+      <div class="row"><div class="k">Height</div><div class="v">1,562 mm</div><div class="v win p">1,622 mm</div><div class="v">1,520 mm</div></div>
+      <div class="row"><div class="k">Wheelbase</div><div class="v">2,400 mm</div><div class="v win p">2,445 mm</div><div class="v">2,450 mm</div></div>
+      <div class="row"><div class="k">Boot space</div><div class="v">240 L</div><div class="v win p">366 L</div><div class="v">260 L</div></div>
+      <div class="row"><div class="k">Ground clearance</div><div class="v na">—</div><div class="v win p">195 mm</div><div class="v">165 mm</div></div>
+      <div class="row"><div class="k">Wheels</div><div class="v">14-inch</div><div class="v win p">16-inch alloy</div><div class="v">15-inch alloy</div></div>
 
       <div class="spec-cat">Safety &amp; Price</div>
-      <div class="row"><div class="k">Airbags</div><div class="v">6</div><div class="v">6</div></div>
-      <div class="row"><div class="k">360° camera &amp; ESC</div><div class="v">Yes</div><div class="v">Yes</div></div>
-      <div class="row"><div class="k">Sunroof</div><div class="v">—</div><div class="v win p">Single-pane</div></div>
-      <div class="row"><div class="k">Price (ex-showroom)</div><div class="v win t">₹6.99–9.99 L</div><div class="v">₹9.69–12.59 L</div></div>
+      <div class="row"><div class="k">Airbags</div><div class="v">6</div><div class="v">6</div><div class="v">6</div></div>
+      <div class="row"><div class="k">360° camera &amp; ESC</div><div class="v win t">360° + ESC</div><div class="v win p">360° + ESC</div><div class="v">Rear cam + ESC</div></div>
+      <div class="row"><div class="k">Sunroof</div><div class="v na">—</div><div class="v win p">Single-pane</div><div class="v na">—</div></div>
+      <div class="row"><div class="k">Price (ex-showroom)</div><div class="v">₹6.99–9.99 L</div><div class="v">₹9.69–12.59 L</div><div class="v win i">₹5.60–8.04 L</div></div>
     </div>
     <div class="legend reveal">
-      <span><span class="d t"></span>Tiago.ev leads this row</span>
-      <span><span class="d p"></span>Punch.ev leads this row</span>
+      <span><span class="d t"></span>Tiago leads</span>
+      <span><span class="d p"></span>Punch leads</span>
+      <span><span class="d i"></span>i10 leads</span>
     </div>
   </div>
 </section>
 
-<!-- COLOURS -->
 <section class="band" id="colors" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap">
     <div class="sec-head center reveal">
       <span class="eyebrow">Pick a personality</span>
       <h2 class="title">All the colour options</h2>
-      <p class="lead">Six shades for the Tiago, seven for the Punch — with dual-tone black roofs on the higher trims. Swatches are representative of each shade.</p>
+      <p class="lead">Six shades for the Tiago, seven each for the Punch and the i10 — with dual-tone black roofs on select trims. Swatches are representative of each shade.</p>
     </div>
-    <div class="colors-grid">
-      <div class="color-panel t reveal d1">
-        <h3><em style="font-style:normal;color:var(--tiago)">Tiago</em>.ev <span class="cnt">6 colours</span></h3>
+    <div class="grid3">
+      <div class="panel t reveal d1">
+        <div class="panel-h"><span><em>Tiago</em>.ev</span><span class="cnt">6 colours</span></div>
         <div class="swatches">
           <div class="sw"><div class="sw-chip duo" style="background:#EEF0EC"></div><div class="sw-name">Pristine White</div></div>
           <div class="sw"><div class="sw-chip duo" style="background:#A7ACAC"></div><div class="sw-name">Pure Grey</div></div>
@@ -543,9 +472,8 @@
         </div>
         <div class="roof-note"><span class="b"></span>Dual-tone black roof on Creative+ trim</div>
       </div>
-
-      <div class="color-panel p reveal d2">
-        <h3><em style="font-style:normal;color:var(--punch)">Punch</em>.ev <span class="cnt">7 colours</span></h3>
+      <div class="panel p reveal d2">
+        <div class="panel-h"><span><em>Punch</em>.ev</span><span class="cnt">7 colours</span></div>
         <div class="swatches">
           <div class="sw"><div class="sw-chip duo" style="background:#EEF0EC"></div><div class="sw-name">Pristine White</div></div>
           <div class="sw"><div class="sw-chip duo" style="background:#A7ACAC"></div><div class="sw-name">Pure Grey</div></div>
@@ -557,100 +485,130 @@
         </div>
         <div class="roof-note"><span class="b"></span>Dual-tone black roof on higher trims</div>
       </div>
+      <div class="panel i reveal d3">
+        <div class="panel-h"><span>Grand <em>i10</em></span><span class="cnt">7 colours</span></div>
+        <div class="swatches">
+          <div class="sw"><div class="sw-chip duo" style="background:#EEF0EC"></div><div class="sw-name">Atlas White</div></div>
+          <div class="sw"><div class="sw-chip" style="background:#B41E2E"></div><div class="sw-name">Fiery Red</div></div>
+          <div class="sw"><div class="sw-chip" style="background:#B7BCC0"></div><div class="sw-name">Typhoon Silver</div></div>
+          <div class="sw"><div class="sw-chip" style="background:#6C7075"></div><div class="sw-name">Titan Grey</div></div>
+          <div class="sw"><div class="sw-chip" style="background:#4A5358"></div><div class="sw-name">Amazon Grey</div></div>
+          <div class="sw"><div class="sw-chip" style="background:#2E6E86"></div><div class="sw-name">Teal Blue</div></div>
+          <div class="sw"><div class="sw-chip duo" style="background:#7DB33A"></div><div class="sw-name">Spark Green</div></div>
+        </div>
+        <div class="roof-note"><span class="b"></span>Dual-tone (Abyss Black roof) on White &amp; Spark Green</div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- VARIANTS -->
 <section class="band" id="variants">
   <div class="wrap">
     <div class="sec-head center reveal">
-      <span class="eyebrow">The line-up &amp; prices</span>
+      <span class="eyebrow">The line-ups &amp; prices</span>
       <h2 class="title">Which variant, at what price</h2>
-      <p class="lead">Ex-showroom prices. Both cars offer a medium-range and a long-range battery across their trims.</p>
+      <p class="lead">Ex-showroom prices. The EVs offer medium- and long-range battery packs; the i10 spans petrol MT, AMT and CNG trims.</p>
     </div>
-    <div class="var-grid">
-      <div class="var-panel t reveal d1">
-        <div class="var-title t"><span><em>Tiago</em>.ev</span></div>
+    <div class="grid3">
+      <div class="panel t reveal d1">
+        <div class="panel-h"><span><em>Tiago</em>.ev</span></div>
         <div class="var-item"><div><div class="vn">Smart 19</div><div class="vb">19.2 kWh · 226 km</div></div><div class="vp">₹6.99 L</div></div>
         <div class="var-item"><div><div class="vn">Pure+ 19</div><div class="vb">19.2 kWh · 226 km</div></div><div class="vp">₹8.49 L</div></div>
         <div class="var-item"><div><div class="vn">Pure+ 24</div><div class="vb">24 kWh · 285 km</div></div><div class="vp">₹9.49 L</div></div>
         <div class="var-item"><div><div class="vn">Creative+ 24</div><div class="vb">24 kWh · 285 km · top</div></div><div class="vp">₹9.99 L</div></div>
-        <div class="var-note">Three trims — Smart, Pure+, Creative+ — across two battery packs. Intro pricing from ₹6.99 L.</div>
+        <div class="var-note">Three trims (Smart, Pure+, Creative+) across two packs. Intro pricing from ₹6.99 L.</div>
       </div>
-
-      <div class="var-panel p reveal d2">
-        <div class="var-title p"><span><em>Punch</em>.ev</span></div>
+      <div class="panel p reveal d2">
+        <div class="panel-h"><span><em>Punch</em>.ev</span></div>
         <div class="var-item"><div><div class="vn">Smart 30</div><div class="vb">30 kWh · entry</div></div><div class="vp">₹9.69 L</div></div>
         <div class="var-item"><div><div class="vn">Smart+ 30 / 40</div><div class="vb">30 or 40 kWh</div></div><div class="vp">from ₹10.29 L</div></div>
         <div class="var-item"><div><div class="vn">Adventure 40</div><div class="vb">40 kWh · 468 km</div></div><div class="vp">₹11.59 L</div></div>
         <div class="var-item"><div><div class="vn">Empowered 40</div><div class="vb">40 kWh · loaded</div></div><div class="vp">₹12.29 L</div></div>
         <div class="var-item"><div><div class="vn">Empowered+ S 40</div><div class="vb">40 kWh · top · sunroof</div></div><div class="vp">₹12.59 L</div></div>
-        <div class="var-note">Five variants across 30 kWh and 40 kWh packs. Ex-showroom prices — confirm on-road pricing at your dealer.</div>
+        <div class="var-note">Five variants across 30 kWh and 40 kWh packs. Ex-showroom — confirm at dealer.</div>
+      </div>
+      <div class="panel i reveal d3">
+        <div class="panel-h"><span>Grand <em>i10</em></span></div>
+        <div class="var-item"><div><div class="vn">Era</div><div class="vb">Petrol MT · base</div></div><div class="vp">₹5.60 L</div></div>
+        <div class="var-item"><div><div class="vn">Magna</div><div class="vb">MT / AMT · CNG</div></div><div class="vp">from ₹6.33 L</div></div>
+        <div class="var-item"><div><div class="vn">Sportz</div><div class="vb">MT / AMT · CNG</div></div><div class="vp">from ₹6.88 L</div></div>
+        <div class="var-item"><div><div class="vn">Sportz (O)</div><div class="vb">MT / AMT</div></div><div class="vp">from ₹7.13 L</div></div>
+        <div class="var-item"><div><div class="vn">Asta</div><div class="vb">MT / AMT · top</div></div><div class="vp">up to ₹8.04 L</div></div>
+        <div class="var-note">Petrol &amp; bi-fuel CNG. 5-speed manual or AMT auto. Corporate &amp; Vibe editions also offered.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FEATURES -->
 <section class="band" id="features" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap">
     <div class="sec-head center reveal">
       <span class="eyebrow">Kit &amp; comfort</span>
-      <h2 class="title">What each one gives you</h2>
-      <p class="lead">They share a strong safety and tech core, though several comfort and tech items are offered only on higher trims. The differences show up in comfort, wheels and the SUV extras.</p>
+      <h2 class="title">What each one stands out for</h2>
+      <p class="lead">All three share a solid safety core (several items are top-trim only). Beyond that, each has a clear personality.</p>
     </div>
     <div class="feat-grid">
       <div class="feat-card shared reveal d1">
-        <h4><span class="tag">Shared</span>On both cars</h4>
+        <h4><span class="tag">All three</span>Shared core</h4>
         <ul class="feat-list">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>10.25" touchscreen, wireless CarPlay &amp; Android Auto</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Digital instrument cluster</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>6 airbags &amp; electronic stability control</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>360° camera &amp; rear parking sensors</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Hill-hold, ISOFIX, connected-car tech</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>6 airbags &amp; ESC (standard)</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Touchscreen with CarPlay &amp; Android Auto</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Rear camera &amp; parking sensors</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>ABS/EBD, ISOFIX &amp; hill-hold</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Rear AC vents (Tiago &amp; i10)</li>
         </ul>
       </div>
       <div class="feat-card t reveal d2">
-        <h4><span class="tag">Tiago only</span>Hatchback perks</h4>
+        <h4><span class="tag">Tiago.ev</span>The value EV</h4>
         <ul class="feat-list">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Rear AC vents (the Punch.ev drops these)</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Lowest entry price in Tata's EV range — from ₹6.99 lakh</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Compact 3,825 mm body — easiest to park and thread through traffic</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Lighter and simpler, for the lowest running &amp; ownership costs</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Cheapest EV here — from ₹6.99 L</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Very low running cost per km</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Compact 3,825 mm — easy city parking</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>360° camera &amp; digital cluster</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Quiet, gearless drive</li>
         </ul>
       </div>
       <div class="feat-card p reveal d3">
-        <h4><span class="tag">Punch only</span>SUV extras</h4>
+        <h4><span class="tag">Punch.ev</span>The all-rounder</h4>
         <ul class="feat-list">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Single-pane sunroof</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Ventilated front seats</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Paddle shifters &amp; electronic parking brake</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Hill descent control &amp; roof rails</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Leather steering, air purifier, Alexa</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Longest range (468 km) &amp; fastest charging</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Most powerful — 127 hp</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Single-pane sunroof &amp; ventilated seats</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>SUV stance, 195 mm clearance, roof rails</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Biggest boot (366 L), air purifier, Alexa</li>
+        </ul>
+      </div>
+      <div class="feat-card i reveal d4">
+        <h4><span class="tag">Grand i10</span>The simple choice</h4>
+        <ul class="feat-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Lowest price of all — from ₹5.60 L</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>No charging — refuel in ~3 min, ~765 km/tank</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>AMT automatic &amp; bi-fuel CNG options</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>8" touchscreen, cruise control, wireless charger</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Wide Hyundai service network</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- DECIDE -->
 <section class="band" id="decide">
   <div class="wrap">
     <div class="decide reveal">
-      <div class="decide-mesh"></div>
+      <div class="decide-mesh"><i class="a"></i><i class="b"></i><i class="c"></i></div>
       <div class="decide-in">
         <span class="eyebrow" style="color:rgba(255,255,255,.6)">Decide together</span>
         <h2>What matters most to your family?</h2>
-        <p class="sub">Tap a priority and we'll point to the car that fits — then talk it over.</p>
+        <p class="sub">Tap a priority and we'll point to the best fit among the three — then talk it over.</p>
         <div class="prio" id="prio">
           <button data-k="budget" class="active">Lowest price</button>
+          <button data-k="running">Running cost</button>
           <button data-k="range">Longest range</button>
+          <button data-k="nocharge">No charging hassle</button>
           <button data-k="city">City &amp; parking</button>
           <button data-k="space">Family space</button>
           <button data-k="features">Features &amp; comfort</button>
-          <button data-k="charging">Fast charging</button>
-          <button data-k="road">Road trips</button>
+          <button data-k="roadtrip">Road trips</button>
         </div>
         <div class="verdict" id="verdict"></div>
       </div>
@@ -658,24 +616,24 @@
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="wrap">
     <div class="foot-top">
       <div>
-        <div class="foot-brand"><span>Tiago</span>.ev <em>vs</em> Punch.ev</div>
-        <p class="foot-note">Built to help a family weigh two Tata EVs together, in one place. All figures are for the 2026 India market.</p>
+        <div class="foot-brand"><span>Tiago.ev</span> · <em>Punch.ev</em> · <b>Grand i10 Nios</b></div>
+        <p class="foot-note">Built to help a family weigh two Tata EVs against a Hyundai petrol hatch, in one place. All figures are for the 2026 India market.</p>
       </div>
       <div class="foot-src">
         Verified against:<br/>
         <a href="https://ev.tatamotors.com" target="_blank" rel="noopener">Tata.ev official</a> ·
+        <a href="https://www.hyundai.com/in/en" target="_blank" rel="noopener">Hyundai India</a> ·
         <a href="https://www.cardekho.com" target="_blank" rel="noopener">CarDekho</a> ·
         <a href="https://www.carwale.com" target="_blank" rel="noopener">CarWale</a> ·
         <a href="https://www.autocarindia.com" target="_blank" rel="noopener">Autocar India</a>
       </div>
     </div>
     <p class="disclaimer">
-      Prices are ex-showroom and indicative; intermediate variant prices are approximate — always confirm on-road pricing, current offers, battery-pack availability and final specifications with an authorised Tata dealer before purchase. Range figures use different certification standards (ARAI single-cycle, P1+P2 combined cycle and manufacturer marketing figures) and are not directly interchangeable; real-world range varies with driving conditions. Colour swatches are representative approximations. Images are official Tata studio photography used here for comparison. Data compiled July 2026.
+      Prices are ex-showroom and indicative; some intermediate variant prices are approximate — always confirm on-road pricing, current offers, powertrain/battery availability and final specifications with an authorised dealer before purchase. EV range figures use different certification standards (ARAI single-cycle, P1+P2 combined cycle, manufacturer marketing) and are not directly interchangeable; real-world range varies. The i10's "range per fill" (~765 km) is indicative, calculated as its 37 L tank × ~20.7 kmpl ARAI mileage; real-world mileage varies with driving and the AMT/CNG figures differ. Colour swatches are representative approximations. Images are official studio/press photography used here for comparison. Data compiled July 2026.
     </p>
   </div>
 </footer>
@@ -683,73 +641,65 @@
 
 <script>
 (function(){
-  // ---- scroll reveal ----
   var io = new IntersectionObserver(function(entries){
     entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
   }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
   document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
 
-  // ---- count up (hero prices) ----
-  var counted=false;
-  function runCounters(){
-    if(counted) return; counted=true;
-    document.querySelectorAll('.ctr').forEach(function(el){
-      var to=parseFloat(el.dataset.to), dec=parseInt(el.dataset.dec||'0',10), start=null, dur=1100;
-      function step(ts){
-        if(!start) start=ts;
-        var p=Math.min((ts-start)/dur,1), eased=1-Math.pow(1-p,3);
-        el.textContent=(to*eased).toFixed(dec);
-        if(p<1) requestAnimationFrame(step); else el.textContent=to.toFixed(dec);
+  // animate glance bars when in view
+  var barWrap=document.querySelector('.glance');
+  if(barWrap){
+    var bio=new IntersectionObserver(function(en){
+      if(en[0].isIntersecting){
+        document.querySelectorAll('.bar-fill').forEach(function(b){ b.style.width=(b.dataset.w||0)+'%'; });
+        bio.disconnect();
       }
-      requestAnimationFrame(step);
-    });
-  }
-  var heroCtr=document.querySelector('.ctr');
-  if(heroCtr){
-    var cio=new IntersectionObserver(function(en){ if(en[0].isIntersecting){ runCounters(); cio.disconnect(); } },{threshold:.4});
-    cio.observe(heroCtr);
+    },{threshold:.25});
+    bio.observe(barWrap);
   }
 
-  // ---- gallery angle switcher ----
+  // gallery angle switcher (3 cars)
   var angles={
-    front:{t:'assets/tiago_front.webp', p:'assets/punch_front.webp', label:'Front'},
-    side:{t:'assets/tiago_side.webp', p:'assets/punch_side.webp', label:'Side'},
-    rear:{t:'assets/tiago_rear.webp', p:'assets/punch_rear.webp', label:'Rear'},
-    interior:{t:'assets/tiago_interior.webp', p:'assets/punch_interior.webp', label:'Interior'}
+    front:{t:'assets/tiago_front.webp', p:'assets/punch_front.webp', i:'assets/i10_front.webp', label:'Front'},
+    side:{t:'assets/tiago_side.webp', p:'assets/punch_side.webp', i:'assets/i10_side.webp', label:'Side'},
+    rear:{t:'assets/tiago_rear.webp', p:'assets/punch_rear.webp', i:'assets/i10_rear.webp', label:'Rear'},
+    interior:{t:'assets/tiago_interior.webp', p:'assets/punch_interior.webp', i:'assets/i10_interior.webp', label:'Interior'}
   };
-  var imgT=document.getElementById('imgTiago'), imgP=document.getElementById('imgPunch'),
-      angT=document.getElementById('angTiago'), angP=document.getElementById('angPunch');
-  // preload
-  Object.keys(angles).forEach(function(k){ var a=new Image(); a.src=angles[k].t; var b=new Image(); b.src=angles[k].p; });
+  var imgT=document.getElementById('imgTiago'), imgP=document.getElementById('imgPunch'), imgI=document.getElementById('imgI10'),
+      angT=document.getElementById('angTiago'), angP=document.getElementById('angPunch'), angI=document.getElementById('angI10');
+  Object.keys(angles).forEach(function(k){ ['t','p','i'].forEach(function(c){ var im=new Image(); im.src=angles[k][c]; }); });
   document.getElementById('viewerTabs').addEventListener('click', function(ev){
     var btn=ev.target.closest('button'); if(!btn) return;
     var a=angles[btn.dataset.a]; if(!a) return;
     this.querySelectorAll('button').forEach(function(b){ b.classList.remove('active'); });
     btn.classList.add('active');
-    [imgT,imgP].forEach(function(i){ i.style.opacity='0'; });
+    [imgT,imgP,imgI].forEach(function(im){ im.style.opacity='0'; });
     setTimeout(function(){
-      imgT.src=a.t; imgP.src=a.p; angT.textContent=a.label; angP.textContent=a.label;
-      imgT.style.opacity='1'; imgP.style.opacity='1';
+      imgT.src=a.t; imgP.src=a.p; imgI.src=a.i;
+      angT.textContent=a.label; angP.textContent=a.label; angI.textContent=a.label;
+      imgT.style.opacity='1'; imgP.style.opacity='1'; imgI.style.opacity='1';
     },220);
   });
 
-  // ---- decision helper ----
+  // decision helper (3 cars)
+  var names={t:'Tiago.ev', p:'Punch.ev', i:'Grand i10'};
   var verdicts={
-    budget:{w:'t',name:'Tiago.ev',why:'It starts at ₹6.99 lakh — roughly ₹2.7 lakh less than the Punch. If the budget is the deciding factor, the Tiago wins comfortably while still giving you 6 airbags and a 10.25" screen.'},
-    range:{w:'p',name:'Punch.ev',why:'The 40 kWh Punch is certified for 468 km (P1+P2) versus the Tiago\'s 285 km. For fewer charging stops and long-term peace of mind, the Punch is clearly ahead.'},
-    city:{w:'t',name:'Tiago.ev',why:'At 3,825 mm long with a tight turning footprint and light steering, the Tiago is the easier car to thread through traffic and squeeze into tight parking. Perfect as a daily city runabout.'},
-    space:{w:'p',name:'Punch.ev',why:'A 366 L boot (vs 240 L), a longer wheelbase and more width and height make the Punch the more accommodating family car for people and luggage.'},
-    features:{w:'p',name:'Punch.ev',why:'Sunroof, ventilated front seats, paddle shifters, a leather-wrapped steering wheel, an air purifier and Alexa — the Punch is the more feature-rich, comfortable cabin for the money.'},
-    charging:{w:'p',name:'Punch.ev',why:'The Punch fast-charges at up to 65 kW, going 20–80% in about 26 minutes and adding 135 km in 15. The Tiago is slower on DC. On charging speed, the Punch leads.'},
-    road:{w:'p',name:'Punch.ev',why:'More range, faster charging, 195 mm ground clearance and 127 hp make the Punch the better highway and road-trip companion. The Tiago is happiest closer to home.'}
+    budget:{w:'i',why:'The Grand i10 Nios starts at ₹5.60 lakh — the cheapest to buy here, over a lakh less than the Tiago and about ₹4 lakh under the Punch. On pure upfront price, the petrol i10 wins.'},
+    running:{w:'t',why:'Electricity is far cheaper per kilometre than petrol, and EVs need less servicing. Between the two EVs the Tiago is the cheapest to buy, so it gives the lowest running cost overall — the Punch is close behind. The petrol i10 costs more to run.'},
+    range:{w:'p',why:'For electric range, the 40 kWh Punch leads at 468 km certified. (If you count distance between fuel stops rather than charges, the petrol i10 goes furthest at ~765 km a tank — but you keep buying petrol.)'},
+    nocharge:{w:'i',why:'No charger to install, no waiting — the i10 refuels in about 3 minutes anywhere and covers ~765 km a tank. If you can\'t charge at home or take frequent long drives, the petrol i10 is the fuss-free pick.'},
+    city:{w:'t',why:'For daily city use the Tiago is ideal: compact at 3,825 mm, light and gearless to drive, and cheap to run on electricity for short trips. The i10 is nearly as small; the Punch is the bulkiest of the three.'},
+    space:{w:'p',why:'The Punch is the biggest — a 366 L boot (vs 260 L i10, 240 L Tiago), the longest body and the most width and height. For carrying people and luggage, it\'s the family-friendliest.'},
+    features:{w:'p',why:'Sunroof, ventilated front seats, 127 hp, air purifier, Alexa, roof rails and the biggest screen-and-camera kit — the Punch is the most feature-rich cabin of the three. The i10 counters with an AMT auto and a wireless charger.'},
+    roadtrip:{w:'i',why:'For long highway trips where charging is uncertain, the petrol i10 is stress-free: ~765 km a tank and a 3-minute refill anywhere. If your routes have reliable fast chargers, the Punch (468 km + 20–80% in 26 min) is the EV road-tripper.'}
   };
   var vEl=document.getElementById('verdict');
   function renderVerdict(k){
     var v=verdicts[k]; if(!v) return;
     vEl.style.opacity='0';
     setTimeout(function(){
-      vEl.innerHTML='<span class="winner '+v.w+'"><span class="badge">Better fit</span><em>'+v.name.replace('.ev','')+'</em>.ev</span>'
-        +'<p class="why">'+v.why+'</p>';
+      var nm=names[v.w];
+      vEl.innerHTML='<span class="winner '+v.w+'"><span class="badge">Best fit</span>'+nm+'</span><p class="why">'+v.why+'</p>';
       vEl.style.opacity='1';
     },160);
   }
